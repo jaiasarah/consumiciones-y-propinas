@@ -1,0 +1,22 @@
+#permitir al usuario ingresar los montos de cada consumicion:por ej 2000, 1200;en caso de q la suma total del pedido sea entre 10000 y 20000 se aplicara un desc del 5%, y si es mayor a20000 se aplicara el 7%de desc. se pedira al usuario el porcemtaje de propina q desea dejaral mozo, en caso de q sea menor al 10% se pedira ingresar un numero mayor y se aplicaraese monto, mostrar el total a pagar y la propina q debe dejar
+monto_consumicion= int (input("Igrese los montos de consumision (se le pedira varias veces para que pueda ingresar todas sus consumiciones en caso de no haber consumido nada mas ingrese 0)"))
+total=0
+contador_consumiciones=0
+while (monto_consumicion != 0):
+    total= total + monto_consumicion
+    monto_consumicion= int (input("Igrese los montos de consumision (se le pedira varias veces para que pueda ingresar todas sus consumiciones en caso de no haber consumido nada mas ingrese 0)"))
+    contador_consumiciones= contador_consumiciones+1
+descuento5= (total*5)/100 
+descuento7= (total*7)/100
+print ("SU GASTO DE CONSUMICIONES ES:")
+print (total)
+if (total > 10000 and total < 20000):
+    print("Se te aplicará un 5% de descunto, tu descuento es de:")
+    print (descuento5)
+    print("tu gasto de consumicion queda en:")
+    print (total - descuento5)
+if (total <= 20000):
+    print("Se te aplicará un 7% de descunto, tu descuento es de:")
+    print (descuento7)
+    print("tu gasto de consumicion queda en:")
+    print (total - descuento7)
