@@ -30,11 +30,14 @@ elif (total >= 20000):
     print("tu gasto de consumicion queda en:")
     print (total2(total,descuento7))
 
-propina= int (input("Que porcentaje de su consumicion le gustaria dejar como propina?"))
-if (propina < 10):
+propina= int (input("Que porcentaje de su consumicion le gustaria dejar como propina?. Este se calculará sobre el monto de su comsumición sin el descuento"))
+
+if (propina>=10): 
+    print("Muchas gracias! El mozo está muy agradecido. El monto de tu propina es:")
+    print (monto_propina(total,propina,100))
+elif (propina < 10):
     print("Pobre mozo, tan poca es la propina que merece?") 
-    print ("Ingresa un porcentaje mayor (Si elijió un porcetaje tan bajo de propin debido a la mala atencion del mozo hágalo saber en la caja por favor")
-elif (propina>=10): 
+    int(input("Ingresa un porcentaje mayor (Si elijió un porcetaje tan bajo de propina debido a la mala atencion del mozo hágalo saber en la caja por favor"))
     print("muchas gracias! El mozo está muy agradecido. El monto de tu propina es:")
     print (monto_propina(total,propina,100))
 print ("Ahora si, le pasamos el importe a pagar:")
